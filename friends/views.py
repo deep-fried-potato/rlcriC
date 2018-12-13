@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .forms import Forms_city,registration_form,Searchu,Searchi
 from .models import Friends_Status
-from accounts.models import Interest_Model
+from accounts.models import Interest_Model, UserProfile
 from django.contrib.auth.models import User
 from collections import Counter
 from django.http import HttpResponse
@@ -94,8 +94,13 @@ def matching(request):
             filteringbutton.append(frnd.receiver.username)
         suggestionlist=[]
         pendingfrnd=list(set(pendingfrnd))
-
         #for suggestion finding current user city and interests
+        curruser = UserProfile.objects.get(user=request.user)
+        if curruser.city!=None:
+            suggcitylist = UserProfile.objects.filter(city=curruser.city)
+            for userprof in suggcitylist:
+                if userprof.user!=request.user:
+                    suggestionlist.append(userprof.user)
 
         curruserinterest=[]
         curruser=User.objects.get(username=request.user.username)

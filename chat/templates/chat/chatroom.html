@@ -147,7 +147,7 @@
 		</div>
 	</div>
 	<div class="container">
-	<h3 class=" text-center" id="Chathead">Messaging</h3>
+	<center><h3 class=" text-heading" id="Chathead">Messaging</h3></center>
 	<div class="messaging">
 	      <div class="inbox_msg">
 	        <div class="inbox_people">
@@ -269,7 +269,8 @@
 
 	        var roomName = {{ room_name_json }};
 					var chatter = roomName;
-					$("#Chathead").html(chatter.replace("{{request.user.username}}",""));
+					var username = chatter.replace("{{request.user.username}}","");
+					$("#Chathead").html('<a href="/accounts/profile/'+username+'">'+username+'</a>');
 	        function getCookie(name) {
 	                  var value = "; " + document.cookie;
 	                  var parts = value.split("; " + name + "=");

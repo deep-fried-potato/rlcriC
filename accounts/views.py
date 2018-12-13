@@ -136,7 +136,7 @@ def delete_view(request):
 
 @login_required(login_url="/accounts/login")
 def view_profile(request, username):
-    user = User.objects.get(username=username)
+    user = get_object_or_404(User,username=username)
     interests = Interest_Model.objects.filter(username=user)
     editable = False
     if request.user.is_authenticated and request.user == user:
@@ -170,9 +170,8 @@ def edit_profile(request, username):
                 if to_delete.exists():
                     to_delete.delete()
                 interest_var = request.POST.get('interests')
-                interest_var = interest_var.lower().replace(" ","")
-                interest_var = interest_var.lower().replace(","," ").split(" ")
-                interest_var = list(filter(None, interest_var))
+                interest_var = interest_var.lower().replace(","," ") 
+                interest_var = interest_var.split()
                 for var in interest_var:
                     a = User.objects.get(username=request.user.username)
                     Interest_Model.objects.create(username=a, interest=var)

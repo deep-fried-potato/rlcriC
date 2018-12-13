@@ -265,7 +265,7 @@ Topic-{{topic}}
 			<div class="row">
 				{{ form }}
 				<input id="Submit-post" type="submit" value="Post" style="float:right">
-				<button id="Submit-attachment" style="float: right" onclick="document.getElementById('modal').style.display='block';event.preventDefault();"><i class="material-icons">attachment</i></button>
+				<button id="Submit-attachment" style="float: right" onclick="{% if user.is_authenticated %}document.getElementById('modal').style.display='block'{% endif %};event.preventDefault();"><i class="material-icons">attachment</i></button>
 			</div>
 		</form>
 		<div id="modal" class="modal">
