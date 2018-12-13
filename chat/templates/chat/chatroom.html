@@ -3,12 +3,7 @@
 <title>Chat</title>
 {% load static %}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<style type="text/css" media="screen">
-		pre {
-			font-family: Verdana, "Bitstream Vera Sans", Geneva, sans-serif;
-		}
-	</style>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<link id="favicon" rel="icon" href="{% static 'favicon.ico' %}">
@@ -152,7 +147,7 @@
 		</div>
 	</div>
 	<div class="container">
-	<h3 class=" text-center">Messaging</h3>
+	<h3 class=" text-center" id="Chathead">Messaging</h3>
 	<div class="messaging">
 	      <div class="inbox_msg">
 	        <div class="inbox_people">
@@ -273,7 +268,8 @@
 	        //Init settings
 
 	        var roomName = {{ room_name_json }};
-
+					var chatter = roomName;
+					$("#Chathead").html(chatter.replace("{{request.user.username}}",""));
 	        function getCookie(name) {
 	                  var value = "; " + document.cookie;
 	                  var parts = value.split("; " + name + "=");

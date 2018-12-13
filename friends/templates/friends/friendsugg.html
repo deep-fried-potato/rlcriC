@@ -102,11 +102,12 @@
         background: rgba(0, 0, 0, 0.2);
         margin: 0 2.5%;
         height: 500px;
+        margin-bottom: 50px;
         transition: background-color 1s ease;
         box-shadow: 20px 20px 20px -15px #000000;
     }
     .left-friends{
-        float: left;
+        float: left!important;
     }
     .matchcontainer .result{
         width: 100%;
@@ -165,6 +166,30 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+.userlist a{
+    font-size: 30px;
+    margin-bottom :0px; 
+    text-decoration: none;
+    margin: 0;
+    font-family: Sitefont-medium;
+}
+.userlist a:hover{
+    -webkit-filter: drop-shadow( -0.1px -0.1px 5px coral);
+	filter: drop-shadow( -0.1px -0.1px 5px coral);
+}
+.userlist:hover{
+    background: rgba(0,0,0,0.5);
+    transition: background 1s ease;
+}
+.userlist{
+    transition: background 1s ease;
+}
+.friends .right-friends .userlist button:first-child{
+    margin-right: 50px;
+}
+.userlist button{
+    width: 30%!important;
+}
 </style>
 {% endblock css %}
 {% block content %}
@@ -191,12 +216,12 @@
                 {% for user in userlist %}
                 {% if user != request.user.username %}
                 <div class="userlist">
-                    <a href="../accounts/profile/{{user.username}}">
-                        <h4>{{user}}</h4>
+                    <a href="/accounts/profile/{{user}}">
+                        {{user}}
                     </a>
                     {% if user not in filteringbutton %}
-                    <p class="{{user}}" style="margin-top:-15px;">
-                        <button type='submit' name='add friend' onclick="Sendr('{{user}}')">Add Friend</button>
+                    <p class="{{user}}">
+                        <button id="Submit" type='submit' name='add friend' onclick="Sendr('{{user}}')">Add Friend</button>
                     </p>
                     {% endif %}
                 </div>
@@ -224,13 +249,12 @@
                 {%if interestlist %}
                 {% for user in interestlist %}
                 <div class="userlist">
-                    <a href='../accounts/profile/{{user.username}}'>
-                        <h4>{{user}}</h4>
+                    <a href='/accounts/profile/{{user.username}}'>
+                        {{user}}
                     </a>
                     {% if user.username not in filteringbutton %}
-                    <p class="{{user}}" style="margin-top : -15px;">
-                        <button type='submit' name='add friend' class="btn btn-primary" onclick="Sendr('{{user}}')">Add
-                            Friend</button>
+                    <p class="{{user}}">
+                        <button id="Submit" type='submit' name='add friend' onclick="Sendr('{{user}}')">Add Friend</button>
                     </p>
                     {%endif%}
                 </div>
@@ -249,15 +273,15 @@
         <div class="centercontent" style="width:80%;max-width:1400px;margin-top:20px;padding:10px;float: right;">
             <h2>Friend Suggestions:</h2><br>
             <div class="result">
-                {% if suggestionlist.len > 0 %}
+                {% if suggestionlist %}
                 {% for user in suggestionlist %}
                 {% if user.username not in filteringbutton %}
                 <div class="userlist">
-                    <a href='../accounts/profile/{{user.username}}'>
-                        <h4>{{user}}</h4>
+                    <a href='/accounts/profile/{{user}}'>
+                        {{user}}
                     </a>
-                    <p class="{{user}}" style="margin-top : -15px;">
-                        <button type='submit' name='add friend' class="btn btn-primary" onclick="Sendr('{{user}}')">ADD_FRIEND</button>
+                    <p class="{{user}}">
+                        <button type='submit' name='add friend' id="Submit" onclick="Sendr('{{user}}')">Add Friend</button>
                     </p>
                 </div>
                 {%endif%}
@@ -279,12 +303,14 @@
                 {% if friends %}
                 {% for frnd in friends %}
                 <div class="userlist">
-                    <a href='../accounts/profile/{{frnd.username}}'>
-                        <h4>{{frnd}}</h4>
-                    </a><br>
+                    <center>
+                    <a href='/accounts/profile/{{frnd}}'>
+                        {{frnd}}
+                    </a>
                     <p class="{{frnd}}">
-                        <button type='submit' name='remove' onclick="Decline('{{frnd}}','1')">Remove</button>
+                        <button type='submit' name='remove' id="Submit" onclick="Decline('{{frnd}}','1')">Remove</button>
                     </p>
+                    </center>
                 </div>
                 {% endfor %}
                 {% else %}
@@ -302,13 +328,15 @@
                 {%if pendingfrnds %}
                 {% for fr in pendingfrnds %}
                 <div class="userlist">
-                    <a href='../accounts/profile/{{fr.username}}'>
-                        <h4>{{fr}}</h4>
-                    </a><br>
+                    <center>
+                    <a href='/accounts/profile/{{fr}}'>
+                        {{fr}}
+                    </a>
                     <p class="{{fr}}">
-                        <button type='submit' name='accept request' class="btn btn-primary" onclick="Accept('{{fr}}')">Accept</button>
-                        <button type='submit' name='decline request' class="btn btn-primary" onclick="Decline('{{fr}}','0')">Decline</button>
+                        <button type='submit' name='accept request' id="Submit" onclick="Accept('{{fr}}')">Accept</button>
+                        <button type='submit' name='decline request' id="Submit" onclick="Decline('{{fr}}','0')">Decline</button>
                     </p>
+                    </center> 
                 </div>
                 {% endfor %}
                 {% else %}

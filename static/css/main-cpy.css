@@ -75,9 +75,11 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
-    filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
+    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #00d4ff)!important;
+    filter: drop-shadow( -0.1px -0.1px 5px #00d4ff)!important;
+    color: aqua;
     font-size: 17px;
+    text-decoration: none;
     transition: font-size 0.5s ease;
 }
 
@@ -511,4 +513,24 @@ textarea{
     color: aqua;
     font-family: Sitefont-book;
     resize: none;
+}
+.inbox_chat::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(29, 29, 29);
+}
+.inbox_chat::-webkit-scrollbar-thumb{
+    background: aqua;
+}
+*::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(29, 29, 29);
+}
+*::-webkit-scrollbar-thumb{
+    background: aqua;
+}
+.chat_list:hover{
+    background: rgba(0,0,0,0.5)
+}
+.inbox_msg{
+    height: 530px;
 }

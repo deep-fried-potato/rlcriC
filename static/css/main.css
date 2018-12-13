@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+button:focus {outline:0;}
+
 html {
     margin: 0;
     padding: 0;
@@ -302,7 +304,7 @@ nav ul li label:hover{
     background-size: auto 366px;
     -webkit-user-select: none;
     user-select: none;
-    margin-top: 200px
+    margin-top: 50px
 }
 
 .hero-logo-circles {
@@ -511,4 +513,26 @@ textarea{
     color: aqua;
     font-family: Sitefont-book;
     resize: none;
+}
+*::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(29, 29, 29);
+}
+*::-webkit-scrollbar-thumb{
+    background: aqua;
+}
+#sitehead{
+    font-size: 50px;
+    margin-top: 150px;
+    cursor: default;
+}
+#sitehead .circlrname{
+    font-family: Sitefont-medium;
+}
+#sitehead .circlrname:hover{
+    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
+    filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
+}
+.circlrdesc{
+    margin-top: 50px;
 }
