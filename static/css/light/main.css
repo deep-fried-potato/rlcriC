@@ -12,13 +12,13 @@ html {
 }
 
 body {
-    color: aqua;
+    color: #09203f;
     margin: 0;
     padding: 0;
     width: 100%;
     font-family: Sitefont-book;
     font-weight: 400;
-    background: radial-gradient(ellipse closest-side at 50% 50%, #393e44, #36383b 25%, #343233);
+    background: radial-gradient(ellipse closest-side at 50% 50%, white, #d4f9fe 25%, #b4b0be);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -39,7 +39,7 @@ nav {
 }
 
 .logo a {
-    color: aqua;
+    color: #09203f;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 0px;
@@ -68,7 +68,7 @@ nav ul li:last-child {
 nav ul li a {
     display: inline-block;
     outline: none;
-    color: aqua;
+    color: #09203f;
     text-decoration: none;
     font-size: 16px;
     letter-spacing: 1.2px;
@@ -77,8 +77,8 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
-    filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
+    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #09203f);
+    filter: drop-shadow( -0.1px -0.1px 5px #09203f);
     font-size: 17px;
     transition: font-size 0.5s ease;
 }
@@ -88,17 +88,17 @@ nav ul li label{
 }
 
 nav ul li label:hover{
-    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
-    filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
+    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #09203f);
+    filter: drop-shadow( -0.1px -0.1px 5px #09203f);
     font-size: 17px;
     transition: font-size 0.5s ease;
 }
 
 .active {
-    -webkit-filter: drop-shadow( -0.1px -0.1px 3px #00d4ff);
-    filter: drop-shadow( -0.1px -0.1px 3px #00d4ff);
+    -webkit-filter: drop-shadow( -0.1px -0.1px 3px #09203f);
+    filter: drop-shadow( -0.1px -0.1px 3px #09203f);
     padding-bottom: 10px;
-    border-bottom: 1px solid #00d4ff;
+    border-bottom: 1px solid #09203f;
 }
 
 @media screen and (max-width: 880px) {
@@ -109,7 +109,7 @@ nav ul li label:hover{
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: #343233;
+        background: #b4b0be;
         opacity: 0;
         transition: all 0.2s ease;
         visibility: hidden;
@@ -153,7 +153,7 @@ nav ul li label:hover{
         padding: 10px 24px;
         opacity: 0;
         visibility: hidden;
-        color: aqua;
+        color: #09203f;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1.2px;
@@ -164,7 +164,7 @@ nav ul li label:hover{
         padding: 10px 24px;
         opacity: 0;
         visibility: hidden;
-        color: aqua;
+        color: #09203f;
         font-size: 14px;
         font-weight: 600;
         letter-spacing: 1.2px;
@@ -186,7 +186,7 @@ nav ul li label:hover{
         display: block;
         width: 20px;
         height: 2px;
-        background: aqua;
+        background: #09203f;
         border-radius: 2px;
         margin-left: 14px;
     }
@@ -221,7 +221,7 @@ nav ul li label:hover{
 }
 
 #nav:checked+.nav-btn i {
-    background: aqua;
+    background: #09203f;
     transition: transform 0.2s ease;
 }
 
@@ -270,7 +270,7 @@ nav ul li label:hover{
     left: 0;
     height: 70px;
     z-index: 9999;
-    background-color: rgba(52, 50, 51, 0);
+    background-color: rgba(180,176,190, 0);
     transition: all 0.3s ease;
 }
 
@@ -286,12 +286,12 @@ nav ul li label:hover{
 }
 
 #logo:hover {
-    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
-    filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
+    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #09203f);
+    filter: drop-shadow( -0.1px -0.1px 5px #09203f);
 }
 
 .content {
-    color: aqua;
+    color: #09203f;
     padding: 3px 50px;
 }
 
@@ -299,7 +299,7 @@ nav ul li label:hover{
     flex: 0 0 500px;
     height: 366px;
     background-repeat: no-repeat;
-    background-image: url(../svgs/index-logo.svg), url(../svgs/index-portal-sides.svg);
+    background-image: url(../../svgs/light/index-logo.svg), url(../../svgs/light/index-portal-sides.svg);
     background-position: center;
     background-size: auto 366px;
     -webkit-user-select: none;
@@ -369,7 +369,7 @@ nav ul li label:hover{
 
 .drop-btn {
     cursor: pointer;
-    color: aqua;
+    color: #09203f;
     font-size: 16px;
     letter-spacing: 1.2px;
     font-weight: 600;
@@ -384,11 +384,11 @@ nav ul li label:hover{
     text-align: center;
     visibility: hidden;
     padding: 5px 15px;
-    background-color: rgba(52, 50, 51, 0.7);
+    background-color: rgba(180 , 176, 190, 0.7);
 }
 
 .arrow {
-    border: solid aqua;
+    border: solid #09203f;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -405,12 +405,12 @@ nav ul li label:hover{
 }
 
 .sticky {
-    background-color: rgba(52, 50, 51, 1)!important;
+    background-color: rgba(180, 176, 190, 1)!important;
     transition: all 0.3s ease 0s;
 }
 
 a {
-    color: coral;
+    color: #f83600;
 }
 
 input[type=text], input[type=password], input[type=email], input[type=number] {
@@ -422,14 +422,14 @@ input[type=text], input[type=password], input[type=email], input[type=number] {
     display: block;
     border: none;
     padding: 10px 0;
-    border-bottom: solid 1px aqua;
+    border-bottom: solid 1px #09203f;
     -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
     transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, aqua 4%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, aqua 4%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #09203f 4%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #09203f 4%);
     background-position: -2000px 0;
     background-repeat: no-repeat;
-    color: aqua;
+    color: #09203f;
 }
 
 input[type=text]:focus, input[type=text]:valid, input[type=email]:focus, input[type=email]:valid, input[type=password]:focus, input[type=password]:valid, input[type=number]:focus, input[type=number]:valid{
@@ -439,7 +439,7 @@ input[type=text]:focus, input[type=text]:valid, input[type=email]:focus, input[t
 }
 
 input[type=text]:focus::-webkit-input-placeholder, input[type=text]:valid::-webkit-input-placeholder, input[type=email]:focus::-webkit-input-placeholder, input[type=email]:valid::-webkit-input-placeholder, input[type=password]:focus::-webkit-input-placeholder, input[type=password]:valid::-webkit-input-placeholder, input[type=number]:focus::-webkit-input-placeholder, input[type=number]:valid::-webkit-input-placeholder {
-    color: aqua;
+    color: #09203f;
     font-size: 11px;
     -webkit-transform: translateY(-100px);
     transform: translateY(100px);
@@ -465,9 +465,9 @@ input[type=text]:focus::-webkit-input-placeholder, input[type=text]:valid::-webk
 
 .radio input[type="radio"]+.radio-label:before {
     content: '';
-    background: aqua;
+    background: #09203f;
     border-radius: 100%;
-    border: 1px solid rgb(0, 225, 255);
+    border: 1px solid rgb(180, 176, 190);
     display: inline-block;
     width: 1.4em;
     height: 1.4em;
@@ -482,19 +482,19 @@ input[type=text]:focus::-webkit-input-placeholder, input[type=text]:valid::-webk
 }
 
 .radio input[type="radio"]:checked+.radio-label:before {
-    background-color: coral;
-    box-shadow: inset 0 0 0 4px aqua;
+    background-color: #f83600;
+    box-shadow: inset 0 0 0 4px #09203f;
 }
 
 .radio input[type="radio"]:focus+.radio-label:before {
     outline: none;
-    border-color: coral;
+    border-color: #f83600;
 }
 
 .radio input[type="radio"]:disabled+.radio-label:before {
-    box-shadow: inset 0 0 0 4px aqua;
-    border-color: rgb(0, 225, 255);
-    background: rgb(0, 225, 255)a;
+    box-shadow: inset 0 0 0 4px #09203f;
+    border-color: rgb(180, 176, 190);
+    background: rgb(180, 176, 190);
 }
 
 .radio input[type="radio"]+.radio-label:empty:before {
@@ -504,22 +504,22 @@ input[type=text]:focus::-webkit-input-placeholder, input[type=text]:valid::-webk
 select{
     width:200px;
     height: 27px;
-    background-color: #343233;
-    color: aqua;
+    background-color: #b4b0be;
+    color: #09203f;
     font-family: Sitefont-book;
 }
 textarea{
-    background-color: #343233;
-    color: aqua;
+    background-color: #b4b0be;
+    color: #09203f;
     font-family: Sitefont-book;
     resize: none;
 }
 *::-webkit-scrollbar{
     width: 10px;
-    background: rgb(29, 29, 29);
+    background: rgb(180, 176, 190);
 }
 *::-webkit-scrollbar-thumb{
-    background: aqua;
+    background: #09203f;
 }
 #sitehead{
     font-size: 50px;
@@ -530,9 +530,35 @@ textarea{
     font-family: Sitefont-medium;
 }
 #sitehead .circlrname:hover{
-    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
-    filter: drop-shadow( -0.1px -0.1px 5px #00d4ff);
+    -webkit-filter: drop-shadow( -0.1px -0.1px 5px #09203f);
+    filter: drop-shadow( -0.1px -0.1px 5px #09203f);
 }
 .circlrdesc{
     margin-top: 50px;
+}
+#Submit, #edit{
+    color: #09203f!important;
+    background-color: rgb(180, 176, 190)!important;
+    border-color: #09203f!important;
+}
+#Submit:hover ,#edit:hover{
+    color: rgb(180, 176, 190)!important;
+    background-color: #09203f!important;
+}
+.topiccont, .forumcont, .postcont, .heading, .matchcontainer>div, .friends>div{
+	background: rgba(255, 255, 255, 0.2)!important;
+	transition: background 2s ease!important;
+}
+.topiccont a:hover, .forumcont a:hover, .postcont a:hover, .userlist a:hover{
+	-webkit-filter: drop-shadow( -0.1px -0.1px 5px #f83600)!important;
+	filter: drop-shadow( -0.1px -0.1px 5px #f83600)!important;
+}
+.topiccont span, .forumcont span, .postcont span{
+	color: #09203f !important;
+}
+.topiccont:hover, .forumcont:hover, .postcont:hover, .heading:hover, .matchcontainer>div:hover, .friends>div:hover, .userlist:hover, .polllist li:hover{
+	background: rgba(255, 255, 255, 0.4)!important;
+}
+#forumdesc span, #topicdesc span{
+    color: #09203f!important;
 }

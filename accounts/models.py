@@ -9,6 +9,8 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=255, blank=True, null=True)
     city = models.CharField(max_length=200, blank=True, null=True)
+    theme = models.IntegerField(choices =((1,"Dark"),
+										(2,"Light")),default=1, verbose_name= ('Theme for the website :'))
     picture = models.ImageField(upload_to='profile_image', blank=True, default='default.jpg')
 
     def __str__(self):

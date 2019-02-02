@@ -2,7 +2,7 @@
 {% load static %}
 {% block css %}
 {{ block.super }}
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="{% if user.userprofile.theme == 2 %}{% static 'css/light/main.css' %}{% else %}{% static 'css/dark/main.css' %}{%endif%}">
 <style>
 	@font-face {
     font-family: Sitefont-book;
@@ -14,7 +14,7 @@
     src: url({% static '/fonts/medium.otf'%});
 }
 </style>
-<link id="favicon" rel="icon" href="{% static 'favicon.ico' %}">
+<link id="favicon" rel="icon" href="{% if user.userprofile.theme == 2 %}{% static 'favicon-light.ico' %}{% else %}{% static 'favicon-dark.ico' %}{%endif%}">
 {% endblock css %}
 {% block body %}
 <div class="navbarcont" id="navbarcont">
@@ -26,7 +26,7 @@
 			<i></i>
 		</label>
 		<div class="logo">
-			<a href="{% url 'home' %}"><img src="{% static '/svgs/logo.svg' %}" alt="Circlr" id="logo"></a>
+			<a href="{% url 'home' %}"><img src="{% if user.userprofile.theme == 2 %}{% static '/svgs/light/logo.svg' %}{% else %}{% static '/svgs/dark/logo.svg' %}{%endif%}" alt="Circlr" id="logo"></a>
 		</div>
 		<div class="nav-wrapper">
 			<ul class="navigation">

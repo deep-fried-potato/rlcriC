@@ -144,13 +144,6 @@
         max-height: 300px;
         overflow-y:auto;
     }
-    .result::-webkit-scrollbar{
-        width: 10px;
-        background: rgb(29, 29, 29);
-    }
-    .result::-webkit-scrollbar-thumb{
-        background: aqua;
-    }
     .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -183,6 +176,11 @@
 }
 .userlist{
     transition: background 1s ease;
+    border-bottom: 1px solid #000000;
+    padding-top: 10px;
+}
+.userlist:first-child{
+    border-top: 1px solid #000000;
 }
 .friends .right-friends .userlist button:first-child{
     margin-right: 50px;

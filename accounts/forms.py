@@ -43,7 +43,6 @@ class EditProfileForm(forms.ModelForm):
             'first_name',
             'last_name',
             'email',
-
         )
         #use exclude = () to exclude
 
@@ -54,7 +53,7 @@ class UserProfileForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('bio', 'city', 'picture')
+        fields = ('bio', 'city', 'picture','theme')
 
     def save(self, user=None):
         user_profile = super(UserProfileForm, self).save(commit=False)

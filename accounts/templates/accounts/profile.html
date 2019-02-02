@@ -97,16 +97,16 @@
 <div class="centercontent" style="width:34%;padding:10px;float: right;">
   <div class="circlepro">
     <div class="hero-logo-circles">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-green-semi.svg' %}" alt="Index portal green semi">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-green.svg' %}" alt="Index portal green">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-orange-semi.svg' %}" alt="Index portal orange semi">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-orange.svg' %}" alt="Index portal orange">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-blue-semi.svg' %}" alt="Index portal blue semi">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-blue.svg' %}" alt="Index portal blue">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-red-semi.svg' %}" alt="Index portal red semi">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-red.svg' %}" alt="Index portal red">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-yellow-semi.svg' %}" alt="Index portal yellow semi">
-      <img class="hero-logo-circle" src="{% static 'svgs/index-portal-yellow.svg' %}" alt="Index portal yellow">
+      <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-green-semi.svg' %}{% else %}{% static 'svgs/dark/index-portal-green-semi.svg' %}{%endif%}" alt="Index portal green semi">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-green.svg' %}{% else %}{% static 'svgs/dark/index-portal-green.svg' %}{%endif%}" alt="Index portal green">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-orange-semi.svg' %}{% else %}{% static 'svgs/dark/index-portal-orange-semi.svg' %}{%endif%}" alt="Index portal orange semi">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-orange.svg' %}{% else %}{% static 'svgs/dark/index-portal-orange.svg' %}{%endif%}" alt="Index portal orange">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-blue-semi.svg' %}{% else %}{% static 'svgs/dark/index-portal-blue-semi.svg' %}{%endif%}" alt="Index portal blue semi">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-blue.svg' %}{% else %}{% static 'svgs/dark/index-portal-blue.svg' %}{%endif%}" alt="Index portal blue">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-red-semi.svg' %}{% else %}{% static 'svgs/dark/index-portal-red-semi.svg' %}{%endif%}" alt="Index portal red semi">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-red.svg' %}{% else %}{% static 'svgs/dark/index-portal-red.svg' %}{%endif%}" alt="Index portal red">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-yellow-semi.svg' %}{% else %}{% static 'svgs/dark/index-portal-yellow-semi.svg' %}{%endif%}" alt="Index portal yellow semi">
+                  <img class="hero-logo-circle" src="{% if user.userprofile.theme == 2 %}{% static 'svgs/light/index-portal-yellow.svg' %}{% else %}{% static 'svgs/dark/index-portal-yellow.svg' %}{%endif%}" alt="Index portal yellow">
       <div id="propic"></div><br>
     </div>
   </div>
@@ -128,5 +128,6 @@
                 {% for int in interestlist %}
                 {{int}},
                 {% endfor %}</p>
+  <p>Theme : {% if user.userprofile.theme == 2 %}Light{% else %}Dark{%endif%}</p>
 </div>
 {% endblock %}
