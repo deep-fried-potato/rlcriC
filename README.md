@@ -1,1 +1,1 @@
-Saari gais,but Any Leaks from here would be considered as the highest level of teammate dishonesty.
+Circlr is an interest based social network aimed at connecting people of similar interests
